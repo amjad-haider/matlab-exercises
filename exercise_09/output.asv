@@ -1,0 +1,10 @@
+function output(xopt)
+    L = [' optimized length:',num2str(xopt),' this year.'];
+    % L = xopt(1);
+    W = xopt(2);
+    H = xopt(3);
+
+    disp(L);
+    disp(W);
+    disp(H);
+end
