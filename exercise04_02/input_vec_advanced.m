@@ -4,7 +4,7 @@ function [t,epsilon] = input_vec_advanced(min,max,dt)
     t = t1:dt:t2;
     tstart=1;
     tend=4;
-    epsilon=zeros(1,length(t));
+    epsilon=zeros(size(t));
     first = find(t==tstart);
     last = find(t==tend);
     epsilon(1,first:last)=linspace(min,max,(last-first+1));

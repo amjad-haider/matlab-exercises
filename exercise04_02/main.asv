@@ -33,10 +33,4 @@ dt = 0.01;
 [~,sigma2_inp] = input_vec_advanced(50,80,dt);
 
 
-plotfunction(t_inp,epsilon1_inp,epsilon2_inp,sigma1_inp,sigma2_inp);
-
-E1 = 75;
-E2 = 100;
-eta = 50;
-options = odeset('MaxStep',1e-3);
-odefun(t_inp,epsilon1_inp,epsilon2_inp,sigma1_inp,sigma2_inp,E1,E2,eta,options,dt)
+plotfunction(t_inp,epsilon1_inp,epsilon2_inp,sigma1_inp,sigma2_inp)
