@@ -2,12 +2,13 @@ function amplification(m,D,c,F0,tmax)
     %Parameters
 
     t=linspace(0,800,10000);
-    f=F0*sin(0.2.*c./m.*t/1000./2.*t);
+    f=F0*sin(0.2.*c./m.*t./1000./2.*t);
     
     subplot(4,1,1);
     plot(t,f);
     ylabel('F(t)');
     xlabel('t')
+    title('The variation in time of the force excitation F(t)')
 
 
     t1=linspace(0,tmax,10000);
@@ -22,8 +23,13 @@ function amplification(m,D,c,F0,tmax)
     plot(omega,y(:,1));
     xlabel('Ω(t)');
     ylabel('y(t)');
+    title('y(t) based on Ω(t)')
+
+    
     eta=omega/sqrt(c/m);
     subplot(4,1,3);
+
+
     [peaks,locs]=findpeaks(y(:,1));
     om=eta(locs);
     plot(om,peaks);
